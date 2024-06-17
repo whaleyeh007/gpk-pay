@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
+		<!-- mobile theme-color -->
+		<meta name="theme-color" content="#26b7bc">
+		<title>酷泊亭線上停車繳費系統</title>
+		<meta name="keywords" content="酷泊亭, GOODPARKING, 酷泊亭會員, 酷泊亭線上繳費, 雲端支付, 線上支付, 線上繳費系統, 線上繳費, 智慧支付, 車位數量, 車位數量查詢, 停車場查詢, 停車場"/>
+		<meta name="description" content="即刻加入酷泊亭會員並使用本線上支付繳納與GOODPARKING合作的停車場場地可輕鬆完成繳費，您也可以在此尋找與您鄰近的停車場並且知道現有車位數量節省尋找停車位的時間。">
+		<meta name="thumbnail" content="http://www.goodparking.com.tw/assets/images/logo-big.png">
+		<meta name="thumbnail" content="http://www.goodparking.com.tw/assets/images/about.jpg">		
+		<meta name="robots" content="index,follow,noarchive">
+		<!-- property -->
+		<meta property="fb:admins" content="100064014641528" />
+		<meta property="og:title" content="即刻加入酷泊亭會員並使用本線上支付繳納與GOODPARKING合作的停車場場地可輕鬆完成繳費，您也可以在此尋找與您鄰近的停車場並且知道現有車位數量節省尋找停車位的時間。"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://www.goodparking.com.tw/"/>
+		<meta property="og:image" content="http://www.goodparking.com.tw/assets/images/about.jpg">
+		<meta property="og:site_name" content="GOODPARKING"/>
+		<meta property="og:description" content="即刻加入酷泊亭會員並使用本線上支付繳納與GOODPARKING合作的停車場場地可輕鬆完成繳費，您也可以在此尋找與您鄰近的停車場並且知道現有車位數量節省尋找停車位的時間。/">
+
+		<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- fontawesome 6 -->
+		<link rel="stylesheet" href="vendor/fontawesome-free-6.3.0-web/css/fontawesome.min.css">
+		<link rel="stylesheet" href="vendor/fontawesome-free-6.3.0-web/css/all.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet"> 
+		<link rel="shortcut icon" href="images/logo-big.svg" type="image/x-icon">
+		<link rel="icon" href="images/logo-big.svg" type="image/x-icon">
+		<!-- iOS touch-icon -->
+		<link rel="apple-touch-icon" href="images/logo-big.png">
+	</head>
+<body>
+	
+	<!-- Overlay panel -->
+	<div class="body-overlay"></div>
+	<!-- Left panel -->
+	<div id="panel-left"></div>
+
+
+	<div class="page page--main" data-page="main">
+	
+		<header class="header header--fixed">	
+			<div class="header__inner">	
+				<div class="header__logo header__logo--text"><a href="index.html"><strong><img src="images/home.svg" width="70" alt="酷泊亭 GOODPARKING"></strong> 線上繳費系統</a></div>	
+				<div class="header__icon open-panel" data-panel="left"><i class="fa-solid fa-equals"></i></div>
+					</div>
+		</header>
+		
+		<div class="page__content page__content--full page__content--with-bottom-nav">
+			<form action="index2.html">
+				<div class="account-info">
+					<div class="account-info__title">
+                        <h2 class="pb-0 font-weight-bold mb-20">臨停線上繳費</h2>
+                    </div>
+                    <div class="account-info__total">
+                        <!--
+                        <div class="form__row">
+                            <div class="form__select">
+                                <select name="ContactSelect" class="required">
+                                    <option value="0">請選擇停放的停車場</option>
+                                    <optgroup label="北部地區">
+                                        <option value="台北美術館">台北美術館</option>
+                                        <option value="中山捷運站">中山捷運站</option>
+                                        <option value="新竹高鐵站">新竹高鐵站</option>
+                                    </optgroup>
+                                    <optgroup label="中部地區">
+                                        <option value="北屯停車場">北屯停車場</option>
+                                        <option value="HIONE波比星球">HIONE波比星球</option>
+                                    </optgroup>
+                                    <optgroup label="南部地區">
+                                        <option value="高雄展覽館">高雄展覽館</option>
+                                        <option value="六堆釀興業(豆油伯)">六堆釀興業(豆油伯)</option>
+                                    </optgroup>
+                                    <optgroup label="東部地區、離島">
+                                        <option value="花蓮七星潭">花蓮七星潭</option>
+                                        <option value="台東太麻里車站">台東太麻里車站</option>
+                                        <option value="澎湖馬公機場">澎湖馬公機場</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        -->
+                        <div class="form__row d-flex align-items-center justify-space">
+                            <input type="text" name="Text" value="" class="form__input form__input--12" placeholder="AAA" />
+                            <input type="text" name="Text" value="" class="form__input form__input--12" placeholder="1234" />
+                        </div>
+
+                        <div class="form__row pt-10">  
+                            <div class="switch">
+                                <label class="form__label rememberC">記住車號:</label>
+                                <input type="checkbox" hidden="hidden" id="enable">
+                                <label class="switch__label" for="enable"></label>
+                            </div>
+                        </div>
+                        <div class="form__row pt-10">
+                            <input type="submit" name="submit" class="form__submit button button--main button--full payBtn" value="前往繳費">
+                        </div>
+            
+                    </div>
+					
+					<svg class="account-info__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+						preserveAspectRatio="none">
+						<path d="M0,0 Q50,201 100,0 L100,100 0,100 Z" fill="#323232" />
+					</svg>
+				</div>
+			</form>
+			
+			<div class="account-buttons mt-20">
+				<a href="addMoney.html"><img src="images/icons/wallet_pig.svg" title="線上儲值" alt="線上儲值"><span>線上儲值</span></a>
+				<a href="monthlyPay.html"><img src="images/icons/monthlyPay.svg" title="月租繳費" alt="月租繳費"><span>月租繳費</span></a>
+				<a href="reserved.html"><img src="images/icons/reserved.svg" alt="預約停車" title="預約停車"/><span>預約停車</span></a>
+			</div>
+			
+			<div class="page-inner">		
+				
+				<div class="page__title-bar">
+					<h2>線上繳費須知</h2>
+				</div>		
+					
+					<div class="cards cards--11">
+						<div class="card-coin">
+							<div class="card-coin__logo">
+								<img src="images/logo-W2-sm.png" alt="">
+							</div>
+							<div class="card-coin__price">
+								需要您開啟相機授權，才夠使用掃描折扣、發票折抵功能。
+							</div>
+						</div>
+						<div class="card-coin">
+							<div class="card-coin__logo">
+								<img src="images/logo-W2-sm.png" alt="">
+							</div>
+							<div class="card-coin__price">
+								電子發票目前僅支援『捐贈發票』、『手機條碼載具』設定。
+							</div>
+						</div>
+						<div class="card-coin">
+							<div class="card-coin__logo">
+								<img src="images/logo-W2-sm.png" alt="">
+							</div>
+							<div class="card-coin__price">
+								若交易完成後，無指定發票處理方式，系統將於2分鐘後自動捐贈發票
+							</div>
+						</div>
+						<div class="card-coin">
+							<div class="card-coin__logo">
+								<img src="images/logo-W2-sm.png" alt="">
+							</div>
+							<div class="card-coin__price">
+								若須開立『統一編號』或是『紙本』發票，請至線下繳費機操作。
+							</div>
+						</div>
+						<div class="card-coin">
+							<div class="card-coin__logo">
+								<img src="images/logo-W2-sm.png" alt="">
+							</div>
+							<div class="card-coin__price">
+								欲使用Apple Pay的Apple設備用戶，請使用safari瀏覽器。
+							</div>
+						</div>
+						<div class="card-coin">
+							<div class="card-coin__logo">
+								<img src="images/logo-W2-sm.png" alt="">
+							</div>
+							<div class="card-coin__price">
+								各別停車場可用的支付方式皆有所差異，若有疑問，請洽停車場業者。
+							</div>
+						</div>
+					</div>
+		
+			</div>	
+		</div>
+			  
+
+
+
+	</div>
+	<!-- PAGE END -->
+
+	<!-- Bottom navigation -->
+	<div id="bottom-toolbar" class="bottom-toolbar"></div>
+
+	<!-- Social Icons Popup -->
+	<div id="popup-social"></div>
+	
+	<!-- Alert --> 
+	<div id="popup-alert"></div>  
+
+	<!-- Notifications --> 
+	<div id="popup-notifications"></div>  
+
+	<script src="vendor/jquery/jquery-3.5.1.min.js"></script>
+	<script src="vendor/jquery/jquery.validate.min.js" ></script>
+	<script src="vendor/swiper/swiper.min.js"></script>
+	<script src="vendor/charts/Chart.min.js"></script>
+	<script src="vendor/charts/chartjs-plugin-style.min.js"></script>
+	<script src="js/custom-charts.js"></script>
+	<script src="js/swiper-init.js"></script>
+	<script src="js/jquery.custom.js"></script>
+	<script src="js/header-scroll.js"></script>
+</body>
+</html>

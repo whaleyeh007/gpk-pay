@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
+		<!-- mobile theme-color -->
+		<meta name="theme-color" content="#26b7bc">
+		<title>酷泊亭線上停車繳費系統</title>
+		<meta name="keywords" content="酷泊亭, GOODPARKING, 酷泊亭線上繳費, 雲端支付, 線上支付, 線上繳費系統, 線上繳費, 智慧支付, 車位數量, 車位數量查詢, 停車場查詢, 停車場"/>
+		<meta name="description" content="即刻加入酷泊亭會員並使用本線上支付繳納與GOODPARKING合作的停車場場地可輕鬆完成繳費，您也可以在此尋找與您鄰近的停車場並且知道現有車位數量節省尋找停車位的時間。">
+		<meta name="thumbnail" content="http://www.goodparking.com.tw/assets/images/logo-big.png">
+		<meta name="thumbnail" content="http://www.goodparking.com.tw/assets/images/about.jpg">		
+		<meta name="robots" content="index,follow,noarchive">
+		<!-- property -->
+		<meta property="fb:admins" content="100064014641528" />
+		<meta property="og:title" content="GOODPARKING企業官方網站，提供客制化軟體設備、改善停車場經營模式及規劃出良好的行車動線、輕鬆完成繳費、節省尋找停車位的時間，更能為現代建築提高增值的空間"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://www.goodparking.com.tw/"/>
+		<meta property="og:image" content="http://www.goodparking.com.tw/assets/images/about.jpg">
+		<meta property="og:site_name" content="GOODPARKING"/>
+		<meta property="og:description" content="即刻加入酷泊亭會員並使用本線上支付繳納與GOODPARKING合作的停車場場地可輕鬆完成繳費，您也可以在此尋找與您鄰近的停車場並且知道現有車位數量節省尋找停車位的時間。/">
+
+		<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- fontawesome 6 -->
+		<link rel="stylesheet" href="vendor/fontawesome-free-6.3.0-web/css/fontawesome.min.css">
+		<link rel="stylesheet" href="vendor/fontawesome-free-6.3.0-web/css/all.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet"> 
+		<link rel="shortcut icon" href="images/logo-big.svg" type="image/x-icon">
+		<link rel="icon" href="images/logo-big.svg" type="image/x-icon">
+		<!-- iOS touch-icon -->
+		<link rel="apple-touch-icon" href="images/logo-big.png">
+	</head>
+<body>
+	
+<div class="page page--login" data-page="login">
+
+	<!-- HEADER -->
+	<header class="header header--fixed">	
+		<div class="header__inner">	
+			<div class="header__icon"><a href="signup.html"><img src="images/icons/arrow-back.svg" alt="" title=""/></a></div>	
+                </div>
+	</header>
+
+        <div class="login">
+		<div class="login__content">	
+			<h2 class="login__title">註冊 GOODPARKING 會員</h2>
+				<div class="login-form">
+					<form id="LoginForm" method="post" action="profiles.html">
+						<div class="login-form__row smsBtn">
+							<label class="login-form__label"> *手機號碼(必填)</label>
+							<button class="smsCode">發送簡訊驗證碼</button>
+							<input type="text" name="Username" value="" class="login-form__input required" />
+						</div>
+						<div class="login-form__row">
+							<label class="login-form__label">簡訊驗證碼</label>
+							<input type="password" name="password" value="" class="login-form__input required" />
+						</div>
+						<div class="login-form__row">
+							<label class="login-form__label">密碼</label>
+							<input type="password" name="password" value="" class="login-form__input required" />
+						</div>
+						<div class="login-form__row">
+							<label class="login-form__label">再次輸入密碼</label>
+							<input type="password" name="password" value="" class="login-form__input required" />
+						</div>
+						<div class="login-form__row">
+							<input type="submit" name="submit" class="login-form__submit button button--main button--full" id="submit" value="註冊會員" onclick="regOk();"/>
+						</div>
+					</form>
+				</div>
+		</div>
+        </div>
+
+</div>
+<!-- PAGE END -->
+   
+<script src="vendor/jquery/jquery-3.5.1.min.js"></script>
+<script src="vendor/jquery/jquery.validate.min.js" ></script>
+<script src="vendor/swiper/swiper.min.js"></script>
+<script src="js/jquery.custom.js"></script>
+</body>
+</html>
+
+<script>
+	function regOk() {
+		alert("註冊成功!");
+	}
+
+</script>

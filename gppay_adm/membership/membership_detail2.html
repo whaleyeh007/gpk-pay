@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="zn-Hant-TW" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>酷泊亭線上繳費- 後台管理系統</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&display=swap"
+        rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="../assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="../assets/css/material-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="../assets/css/fontawesome.css" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="../assets/vendor/spinkit.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/preloader.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="../assets/css/app.css" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="../assets/css/dark-mode.css" rel="stylesheet">
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="../assets/vendor/daterangepicker.css" rel="stylesheet">
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="../assets/css/flatpickr.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/flatpickr-airbnb.css" rel="stylesheet">
+
+    <!-- Vector Maps -->
+    <link type="text/css" href="../assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../assets/images/logo/logo-big.svg" type="image/x-icon">
+    <link rel="icon" href="../assets/images/logo/logo-big.svg" type="image/x-icon">
+    <!-- iOS touch-icon -->
+    <link rel="apple-touch-icon" href="../assets/images/logo/logo-big.png">
+
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+    <!-- preloader loading載入 -->
+    <div class="preloader">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+
+        <!-- <div class="sk-bounce">
+    <div class="sk-bounce-dot"></div>
+    <div class="sk-bounce-dot"></div>
+  </div> -->
+    </div>
+    <!-- // preloader loading載入 END -->
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- 版頭頂部 -->
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar"
+                data-primary>
+
+                <!-- 手機版選單 -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- 手機版 LOGO -->
+                <a href="../index.html" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="../assets/images/logo/goodparkingLogo.png"
+                        width="32" alt="Huma">
+                    <span class="d-none d-lg-block">後台管理系統</span>
+                </a>
+
+
+                <div class="flex"></div>
+
+                <!-- 右上管理者 -->
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+                            <img width="32" height="32" class="rounded-circle mr-8pt"
+                                src="../assets/images/people/50/guy-3.jpg" alt="account" />
+                            <span class="flex d-flex flex-column mr-8pt">
+                                <span class="navbar-text-100">酷泊亭</span>
+                                <small class="navbar-text-50">管理員</small>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>個人帳號管理</strong></div>
+                            <div class="dropdown-divider"></div>
+                            <!--<a class="dropdown-item" href="../edit-account.html">修改個人資料</a>-->
+                            <a class="dropdown-item" href="../login.html">登出</a>
+                        </div>
+                    </div>
+
+                    <!-- 訊息通知 -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown"
+                            data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>系統訊息</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">2023/01/02 10:30:10</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i
+                                                        class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">您修改密碼</strong>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">2023/01/02 10:30:10</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">會員加入</strong>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">2023/01/02 10:30:10</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i
+                                                        class="material-icons font-size-16pt text-warning">monetization_on</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">會員儲值</strong>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 訊息通知 END -->
+
+                </div>
+
+            </div>
+
+            <!-- //  版頭頂部 END -->
+
+            <div class="border-bottom-2 py-32pt position-relative z-1">
+                <div
+                    class="container-fluid page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+                    <div class="flex d-flex flex-column flex-sm-row align-items-center">
+
+                        <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <h2 class="mb-0">會員列表</h2>
+
+                            <ol class="breadcrumb p-0 m-0">
+                                <li class="breadcrumb-item"><a href="../index.html">後台管理系統</a></li>
+                                <li class="breadcrumb-item"><a href="accounts.html">會員列表</a></li>
+                                <li class="breadcrumb-item active">會員詳細</li>
+
+                            </ol>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-fluid page__container">
+                <div class="row page-section">
+                    <div class="col-lg-12 pr-lg-0">
+                        <div class="page-section">
+                            <h4>王阿大</h4>
+                        </div>
+                        <div class="card dashboard-area-tabs p-relative o-hidden mb-0">
+                            <div class="card-header p-0 nav">
+                                <div class="row no-gutters" role="tablist">
+                                    <div class="col-auto">
+                                        <a href="#" id="basic_info-tab" data-toggle="tab" data-target="#basic_info" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="card-title">基本資料</strong>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto border-left border-right">
+                                        <a href="#" id="payment_his-tab" data-toggle="tab" data-target="#payment_his" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="card-title">儲值記錄</strong>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto border-left border-right">
+                                        <a href="#" id="payment_his-tab" data-toggle="tab" data-target="#monthlyPay_log" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="card-title">會員月租繳費紀錄</strong>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto border-left border-right">
+                                        <a href="#" id="addValue_his-tab" data-toggle="tab" data-target="#addValue_his" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="card-title">扣款記錄</strong>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="col-auto border-left border-right">
+                                        <a href="#" id="addValue_his-tab" data-toggle="tab" data-target="#reserved_log" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start active">
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="card-title">預約停車紀錄</strong>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <!--基本資料-->
+                                <div class="tab-pane fade card-body" role="tabpanel" id="basic_info">
+                                    <div class="page-section">
+                                        <div class="list-group list-group-form">
+                                            <div class="list-group-item">
+                                                <div class="form-group row align-items-center mb-0">
+                                                    <label class="col-form-label form-label col-sm-3">大頭照</label>
+                                                    <div class="col-sm-9 media align-items-center">
+                                                        <a class="media-left mr-16pt">
+                                                            <img src="../assets/images/256_rsz_florian-perennes-594195-unsplash.jpg" width="72" class="rounded-circle" />
+                                                        </a>
+                                                        <div class="media-body"> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <div class="form-group row align-items-center mb-0">
+                                                    <label class="form-label col-form-label col-sm-3">手機</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text"
+                                                               class="form-control"
+                                                               value="0912345678" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <div class="form-group row align-items-center mb-0">
+                                                    <label class="form-label col-form-label col-sm-3">姓名</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text"
+                                                               class="form-control"
+                                                               value="王阿大" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <div class="form-group row align-items-center mb-0">
+                                                    <label class="form-label col-form-label col-sm-3">性別</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text"
+                                                               class="form-control"
+                                                               value="男" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <div class="form-group row align-items-center mb-0">
+                                                    <label class="form-label col-form-label col-sm-3">生日</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="date" class="form-control" value="1970-01-01" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <div class="form-group row align-items-center mb-0">
+                                                    <label class="form-label col-form-label col-sm-3">Email</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="email"
+                                                               class="form-control"
+                                                               value="alexander.watson@fake-mail.com" disabled>
+                                                            </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item">
+                                                <div class="form-group row align-items-center mb-0">
+                                                    <label class="form-label col-form-label col-sm-3">綁定的車輛/機車</label>
+                                                    <div class="col-sm-9">
+                                                        <ul class="carsLicense list-unstyled">
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="text-center">
+                                                                    <span class="badge badge-info">汽車</span>
+                                                                    <p class="m-0">NNN-7211</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="text-center">
+                                                                    <span class="badge badge-warning">機車</span>
+                                                                    <p class="m-0">CBC-9999</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="text-center">
+                                                                    <span class="badge badge-warning">機車</span>
+                                                                    <p class="m-0">CBC-9999</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="text-center">
+                                                                    <span class="badge badge-warning">機車</span>
+                                                                    <p class="m-0">CBC-9999</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="text-center">
+                                                                    <span class="badge badge-warning">機車</span>
+                                                                    <p class="m-0">CBC-9999</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="text-center">
+                                                                    <span class="badge badge-warning">機車</span>
+                                                                    <p class="m-0">CBC-9999</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="text-center">
+                                                                    <span class="badge badge-warning">機車</span>
+                                                                    <p class="m-0">CBC-9999</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">
+                                                                    <div class="text-center">
+                                                                    <span class="badge badge-warning">機車</span>
+                                                                    <p class="m-0">CBC-9999</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--儲值記錄-->
+                                <div class="tab-pane fade card-body" role="tabpanel" id="payment_his">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered mb-0 thead-border-top-0 table-nowrap text-center">
+                                            <thead class="">
+                                                <th>儲值日期</th>
+                                                <th>儲值金額(TWD)</th>
+                                                <th>目前餘額(TWD)</th>
+                                                <th>支付方式</th>
+                                                <th>發票/收據</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <p class="m-0">2023/02/02 10:30:30</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0 text-right"><i class="fas fa-dollar-sign"></i> <u>1,000</u> 元</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0 text-right"><i class="fas fa-dollar-sign"></i> <u>960</u> 元</p>
+                                                    </td>
+                                                    <td>
+                                                        <img src="../assets/images/pay/applePay.png" width="72">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary font-size-24pt" data-toggle="modal" data-target="#invoiceDialog"><i class="fas fa-file-invoice-dollar"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p class="m-0">2023/02/02 10:30:30</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0 text-right"><i class="fas fa-dollar-sign"></i> <u>1,000</u> 元</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0 text-right"><i class="fas fa-dollar-sign"></i> <u>960</u> 元</p>
+                                                    </td>
+                                                    <td>
+                                                        <img src="../assets/images/pay/LinePay.png" width="72">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary font-size-24pt" data-toggle="modal" data-target="#invoiceDialog"><i class="fas fa-file-invoice-dollar"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--頁碼-->
+                                    <div class="text-center mt-4">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination pagination-md d-flex justify-content-center">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">first_page</span>
+                                                        <span class="sr-only">First</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                        <span class="sr-only">Prev</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#" aria-label="1">
+                                                        <span>1</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="2">
+                                                        <span>2</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="3">
+                                                        <span>3</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="4">
+                                                        <span>4</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Next</span>
+                                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Last</span>
+                                                        <span aria-hidden="true" class="material-icons">last_page</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <!--會員月租繳費紀錄-->
+                                <div class="tab-pane fade card-body" role="tabpanel" id="monthlyPay_log">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered mb-0 thead-border-top-0 table-nowrap text-center">
+                                            <thead class="">
+                                                <th>繳費日期</th>
+                                                <th>繳費金額(TWD)</th>
+                                                <th>繳費狀態</th>
+                                                <th>自動扣款</th>
+                                                <th>發票/收據</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <p class="m-0">2024/06/07</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0 text-right"><i class="fas fa-dollar-sign"></i> <u>1,420</u> 元</p>
+                                                    </td>
+                                                    <td class="bg-danger">
+                                                        <p class="m-0"><b class="text-light">未繳費</b></p>
+                                                    </td>
+                                                    <td>
+                                                        否
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary font-size-24pt" data-toggle="modal" data-target="#invoiceDialog"><i class="fas fa-file-invoice-dollar"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p class="m-0">2023/05/06</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0 text-right"><i class="fas fa-dollar-sign"></i> <u>1,420</u> 元</p>
+                                                    </td>
+                                                    <td class="bg-success">
+                                                        <p class="m-0"><b class="text-light">已繳費</b></p>
+                                                    </td>
+                                                    <td>
+                                                        否
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary font-size-24pt" data-toggle="modal" data-target="#invoiceDialog"><i class="fas fa-file-invoice-dollar"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--頁碼-->
+                                    <div class="text-center mt-4">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination pagination-md d-flex justify-content-center">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">first_page</span>
+                                                        <span class="sr-only">First</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                        <span class="sr-only">Prev</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#" aria-label="1">
+                                                        <span>1</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="2">
+                                                        <span>2</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="3">
+                                                        <span>3</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="4">
+                                                        <span>4</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Next</span>
+                                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Last</span>
+                                                        <span aria-hidden="true" class="material-icons">last_page</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <!--扣款記錄-->
+                                <div class="tab-pane fade card-body" role="tabpanel" id="addValue_his">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered mb-0 thead-border-top-0 table-nowrap text-center">
+                                            <thead class="">
+                                                <th>車牌號碼</th>
+                                                <th>扣款日期</th>
+                                                <th>扣款金額</th>
+                                                <th>停車場名稱</th>
+                                                <th>入場時間</th>
+                                                <th>出場時間</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <p class="m-0">AAA-1234</p>
+                                                        <b class="badge badge-info">汽車</b>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0">2023/02/02 10:30:30</p>
+                                                        <b class="">停車時間：<u>4.5小時</u></b>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0 text-right"><i class="fas fa-dollar-sign"></i> <u>180</u> 元</p>
+                                                        <p class="m-0 text-right">
+                                                            <b class="badge badge-secondary text-right">剩餘金額: <u class="font-size-12pt">820</u> 元</b>
+                                                        </p>
+                                                        
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0">百富停車場</p>
+                                                    </td>
+                                                    <td>
+                                                        <a class="d-block" href="javascript:void(0);" data-toggle="modal" data-target="#carIn_Capture">
+                                                            <p class="mb-0">2023/01/03 10:20:30</p>
+                                                            <u class="text-primary">入場車照</u>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="d-block" href="javascript:void(0);" data-toggle="modal" data-target="#carOut_Capture">
+                                                            <p class="mb-0">2023/01/03 14:10:23</p>
+                                                            <u class="text-primary">出場車照</u>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p class="m-0">AAA-1234</p>
+                                                        <b class="badge badge-info">汽車</b>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0">2023/02/02 10:30:30</p>
+                                                        <b class="">停車時間：<u>4.5小時</u></b>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0 text-right"><i class="fas fa-dollar-sign"></i> <u>180</u> 元</p>
+                                                        <p class="m-0 text-right">
+                                                            <b class="badge badge-secondary text-right">剩餘金額: <u class="font-size-12pt">820</u> 元</b>
+                                                        </p>
+                                                        
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0">百富停車場</p>
+                                                    </td>
+                                                    <td>
+                                                        <a class="d-block" href="javascript:void(0);" data-toggle="modal" data-target="#carIn_Capture">
+                                                            <p class="mb-0">2023/01/03 10:20:30</p>
+                                                            <u class="text-primary">入場車照</u>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="d-block" href="javascript:void(0);" data-toggle="modal" data-target="#carOut_Capture">
+                                                            <p class="mb-0">2023/01/03 14:10:23</p>
+                                                            <u class="text-primary">出場車照</u>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--頁碼-->
+                                    <div class="text-center mt-4">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination pagination-md d-flex justify-content-center">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">first_page</span>
+                                                        <span class="sr-only">First</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                        <span class="sr-only">Prev</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#" aria-label="1">
+                                                        <span>1</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="2">
+                                                        <span>2</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="3">
+                                                        <span>3</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="4">
+                                                        <span>4</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Next</span>
+                                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Last</span>
+                                                        <span aria-hidden="true" class="material-icons">last_page</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <!--預約停車紀錄-->
+                                <div class="tab-pane fade show active card-body" role="tabpanel" id="reserved_log">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered mb-0 thead-border-top-0 table-nowrap text-center">
+                                            <thead class="">
+                                                <th>預約狀態</th>
+                                                <th>預約日期/時間</th>
+                                                <th>停車場名</th>
+                                                <th>入/離場時間</th>
+                                                <th>支付方式</th>
+                                                <th>費用</th>
+                                                <th>發票/收據</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <p class="m-0">預約成功</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0">2024/06/02 10:30:30</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0">北屯停車場</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0">2024/06/02 10:30:30</p>
+                                                        <p class="m-0">2024/06/03 10:30:30</p>
+                                                    </td>
+                                                    <td>
+                                                        <img src="../assets/images/pay/applePay.png" width="72">
+                                                    </td>
+                                                    <td>
+                                                        <p class="m-0 text-right"><i class="fas fa-dollar-sign"></i> <u>960</u> 元</p>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary font-size-24pt" data-toggle="modal" data-target="#invoiceDialog"><i class="fas fa-file-invoice-dollar"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--頁碼-->
+                                    <div class="text-center mt-4">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination pagination-md d-flex justify-content-center">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">first_page</span>
+                                                        <span class="sr-only">First</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                        <span class="sr-only">Prev</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#" aria-label="1">
+                                                        <span>1</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="2">
+                                                        <span>2</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="3">
+                                                        <span>3</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="4">
+                                                        <span>4</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Next</span>
+                                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                    </a>
+                                                </li>
+                                    
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Last</span>
+                                                        <span aria-hidden="true" class="material-icons">last_page</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+                                    <hr style="margin: 40px 0;">
+
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered mb-0 thead-border-top-0 table-nowrap text-center">
+                                            <thead class="">
+                                                <th>預約狀態</th>
+                                                <th>預約日期/時間</th>
+                                                <th>停車場名</th>
+                                                <th>入/離場時間</th>
+                                                <th>支付方式</th>
+                                                <th>費用</th>
+                                                <th>發票/收據</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="7">
+                                                        <h4 class="m-0 text-center">
+                                                            此會員未符合預約停車資格!
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 頁尾 footer -->
+            <div class="js-fix-footer footer border-top-2">
+                <div class="container-fluid page__container page-section d-flex flex-column">
+                    <p class="text-70 brand mb-24pt">
+                        <img class="brand-icon" src="../assets/images/logo/goodparking-logo2.png" width="100"
+                            alt="Goodparking Admin"> 後台管理系統
+                    </p>
+                </div>
+                <div class="pb-16pt pb-lg-24pt">
+                    <div class="container-fluid page__container">
+                        <div class="bg-dark rounded page-section py-lg-32pt px-16pt px-lg-24pt">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-4 mb-24pt mb-md-0">
+                                    <p class="text-white-70 mb-8pt"><strong>追蹤酷泊亭</strong></p>
+                                    <nav class="nav nav-links nav--flush">
+                                        <a href="https://www.facebook.com/profile.php?id=100064014641528"
+                                            class="nav-link mr-8pt"><img
+                                                src="../assets/images/icon/footer/facebook-square@2x.png" width="24"
+                                                height="24" alt="Facebook"></a>
+                                        <a href="https://www.youtube.com/channel/UCWKuEIWw_C88o6x0jqb2yIw"
+                                            class="nav-link"><img
+                                                src="../assets/images/icon/footer/youtube-square@2x.png" width="24"
+                                                height="24" alt="YouTube"></a>
+                                    </nav>
+                                </div>
+                                <div class="col-md-4 text-md-right">
+                                    <p class="mb-8pt d-flex align-items-md-center justify-content-md-end">
+                                        <a href="../company/terms.html"
+                                            class="text-white-70 text-underline mr-16pt">服務條款</a>
+                                        <a href="../company/privacy.html" class="text-white-70 text-underline">隱私權政策</a>
+                                    </p>
+                                    <p class="text-white-50 small mb-0">Copyright 2022-
+                                        <script>document.write(new Date().getFullYear())</script> &copy; All rights
+                                        reserved.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 左側選單 -->
+        <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-dark sidebar-left" data-perfect-scrollbar>
+
+                    <a href="../index.html" class="sidebar-brand ">
+                        <img class="sidebar-brand-icon" src="../assets/images/logo/goodparkingLogo.png"
+                            alt="Goodparking Admin">
+                        <span>後台管理系統</span>
+                    </a>
+
+                    <div class="sidebar-account mx-16pt mb-16pt dropdown">
+                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
+                            data-caret="false">
+                            <img width="32" height="32" class="rounded-circle mr-8pt"
+                                src="../assets/images/people/50/guy-3.jpg" alt="account" />
+                            <span class="flex d-flex flex-column mr-8pt">
+                                <span class="text-black-100">酷泊亭</span>
+                                <small class="text-black-50">管理員</small>
+                            </span>
+                            <i class="material-icons text-black-20 icon-16pt">keyboard_arrow_down</i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-full dropdown-menu-caret-center">
+                            <div class="dropdown-header"><strong>個人帳號管理</strong></div>
+                            <div class="dropdown-divider"></div>
+                            <!--<a class="dropdown-item" href="../edit-account.html">修改個人資料</a>-->
+                            <a class="dropdown-item" href="../login.html">登出</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-heading">總覽</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="../index.html">
+                                <span
+                                    class="material-icons sidebar-menu-icon sidebar-menu-icon--left">insert_chart_outlined</span>
+                                <span class="sidebar-menu-text">系統首頁</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-heading">帳務管理</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="../accounting/parkinglot_record.html">
+                                <span
+                                    class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
+                                <span class="sidebar-menu-text">各停車場收費明細</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="../accounting/findcar.html">
+                                <span
+                                    class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
+                                <span class="sidebar-menu-text">依車牌查詢繳費記錄</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-heading">會員管理</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="accounts.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">account_box</span>
+                                    會員列表
+                            </a>
+                        </li>
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#membershipAdm_menu2">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">attach_money</span>
+                                帳務/儲值相關
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="membershipAdm_menu2">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="membership_payment.html">
+                                        <span class="sidebar-menu-text">會員繳費記錄</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="membership_addvalue.html">
+                                        <span class="sidebar-menu-text">會員儲值記錄</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="membership_detail3.html">
+                                        <span class="sidebar-menu-text">會員月租繳費紀錄</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-heading">預約停車</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="../membership/membership_detail2.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">directions_car</span>
+                                <span class="sidebar-menu-text">預約停車紀錄</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-heading">停車場據點</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="../parkinglot/parking.html">
+                                <span
+                                    class="material-icons sidebar-menu-icon sidebar-menu-icon--left">directions_car</span>
+                                <span class="sidebar-menu-text">停車場據點管理</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-heading">問題回應</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="../discussion/discussions.html">
+                                <span
+                                    class="material-icons sidebar-menu-icon sidebar-menu-icon--left">contact_support</span>
+                                <span class="sidebar-menu-text">問答管理</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- // 左側選單 END -->
+
+        <!-- receipt Modal -->
+        <div class="modal fade" id="invoiceDialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">發票/收據</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center"><img src="../assets/images/invoice.jpg" width="70%"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="../assets/images/invoice.jpg" type="button" class="btn btn-primary" download>下載</a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 入場車 Modal -->
+        <div class="modal fade" id="carIn_Capture" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">車牌號碼: <span>AAA-1232</span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="w-100">
+                            <img src="../assets/images/f_25554224_1.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 出場車 Modal -->
+        <div class="modal fade" id="carOut_Capture" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">車牌號碼: <span>AAA-1232</span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="w-100">
+                            <img src="../assets/images/f_25554224_1.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- jQuery -->
+    <script src="../assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="../assets/vendor/popper.min.js"></script>
+    <script src="../assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="../assets/vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="../assets/vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="../assets/vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="../assets/js/app.js"></script>
+
+    <!-- Highlight.js -->
+    <script src="../assets/js/hljs.js"></script>
+
+    <!-- Global Settings -->
+    <script src="../assets/js/settings.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="../assets/vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="../assets/js/flatpickr.js"></script>
+
+    <!-- DateRangePicker -->
+    <script src="../assets/vendor/moment.min.js"></script>
+    <script src="../assets/vendor/daterangepicker.js"></script>
+    <script src="../assets/js/daterangepicker.js"></script>
+
+    <!-- Moment.js -->
+    <script src="../assets/vendor/moment.min.js"></script>
+    <script src="../assets/vendor/moment-range.js"></script>
+
+    <!-- Chart.js -->
+    <script src="../assets/vendor/Chart.min.js"></script>
+    <script src="../assets/js/chartjs.js"></script>
+
+    <!-- Chart.js Samples -->
+    <script src="../assets/js/page.analytics-dashboard.js"></script>
+
+    <!-- Vector Maps -->
+    <script src="../assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="../assets/js/vector-maps.js"></script>
+
+    <!-- List.js -->
+    <script src="../assets/vendor/list.min.js"></script>
+    <script src="../assets/js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="../assets/js/toggle-check-all.js"></script>
+    <script src="../assets/js/check-selected-row.js"></script>
+
+</body>
+
+</html>

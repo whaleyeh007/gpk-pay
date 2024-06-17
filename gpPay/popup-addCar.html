@@ -1,0 +1,26 @@
+<div class="popup popup--shadow popup--addCar p-20">
+	<div class="popup__close"><a href="#" class="close-popup" data-popup="addCar"><img src="images/icons/close.svg" alt="" title="" /></a></div>
+	<h2 class="popup__title">綁定車牌號碼</h2>
+    <div class="fieldset">
+        <div class="form">
+            <form id="Form" method="get" action="">
+                <div class="form__row">
+                    <h3 class="pb-10 pt-20">選擇車種：</h3>
+                    <div class="radio-option">
+                        <input type="radio" name="radioption1" id="adaCar01" value="1" checked /><label for="adaCar01">機車</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="radioption1" id="addCar02" value="2" /><label for="addCar02">汽車</label>
+                    </div>	
+                </div>
+                <div class="form__row">
+                    <label for="" class="form__label form__label_W100">輸入車牌號碼<small>(-也需填寫)</small></label>
+                    <input id="nameF" type="text" name="Text" value="" class="form__input required" placeholder="輸入車牌號碼"/>
+                </div>
+                <div class="form__row mt-40">
+                    <input type="submit" name="submit" onclick="addCarFin();" class="form__submit button button--main button--full" id="submit" value="綁定車牌" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
