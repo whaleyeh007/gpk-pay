@@ -42,6 +42,9 @@ $(document).ready(function () {
 	
 	//LOAD 停車據點 POPUP
 	$( "#popup-parkinglot" ).load( "popup-parkinglot.html" );
+
+	//LOAD 繳費轉載 POPUP
+	$( "#popup-paying" ).load( "popup-paying.html" );
 	
 	//LOAD SOCIAL POPUP
 	$( "#popup-social" ).load( "popup-social.html" );
