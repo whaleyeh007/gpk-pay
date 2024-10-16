@@ -42,6 +42,15 @@
   background: #fff !important;
 }
 
+.bg-w_75a {
+  background: rgba(255,255,255,.75) !important;
+  border-radius:6px;
+}
+
+.bgT{
+  background-color: transparent !important;
+}
+
 .w-100M0 {
   width: 100% !important;
   margin: 0 !important;
@@ -5240,13 +5249,4 @@ ul.carsLicense li .carNum {
 
 .bTable td{
   vertical-align: middle;
-}
-
-.smsBtn{
-  position: relative;
-}
-
-.smsBtn .smsCode{
-  position: absolute;
-  right: 0;
 }
