@@ -5122,7 +5122,39 @@ ul.carsLicense li .carNum {
   text-align: center;
 }
 
+/* MARK:電腦版側選單 */
+@media (min-width:1200px) {
+  .page{
+    max-width: auto !important;
+  }
+  .header{
+    max-width: 768px;
+  }
+  .header--fixed {
+    left: 50%;
+    margin-left: -384px;
+  }
+  .panel--left {
+    left: calc(-25% + 64px);
+  }
+  .panel{
+    width: calc(25% - 64px);
+  }
+  body.with-panel-left-reveal .page, body.with-panel-left-reveal .bottom-toolbar{
+    transform: translate3d(calc(5% - 64px), 0, 0);
+  }
+  .bottom-navigation__icons{
+    width: calc(35% - 0px);
+  }
+}
+
+/* MARK:max767 */
+
 @media (max-width:767px) {
+  .page{
+    max-width: 768px;
+  }
+
   .homepage__pay__method ul.carsLicense{
     width: 90%;
     margin: 0 5%;
